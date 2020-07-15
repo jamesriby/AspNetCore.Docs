@@ -5,10 +5,10 @@ description: Learn about the tooling available to build Blazor apps.
 monikerRange: '>= aspnetcore-3.1'
 ms.author: riande
 ms.custom: mvc
-ms.date: 07/06/2020
+ms.date: 07/07/2020
 no-loc: [Blazor, "Blazor Server", "Blazor WebAssembly", "Identity", "Let's Encrypt", Razor, SignalR]
 uid: blazor/tooling
-zone_pivot_groups: operating-systems-set-one
+zone_pivot_groups: operating-systems
 ---
 # Tooling for ASP.NET Core Blazor
 
@@ -29,6 +29,8 @@ By [Daniel Roth](https://github.com/danroth27) and [Luke Latham](https://github.
    For information on the two Blazor hosting models, *Blazor WebAssembly* and *Blazor Server*, see <xref:blazor/hosting-models>.
 
 1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app.
+
+For more information on trusting the ASP.NET Core HTTPS development certificate, see <xref:security/enforcing-ssl#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos>.
 
 ::: zone-end
 
@@ -64,6 +66,16 @@ By [Daniel Roth](https://github.com/danroth27) and [Luke Latham](https://github.
 
 1. Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app.
 
+## Trust a development certificate
+
+There's no centralized way to trust a certificate on Linux. Typically, one of the following approaches is adopted:
+
+* Exclude the app's URL in browser's exclude list.
+* Trust all self-signed certificates for `localhost`.
+* Add the certificate to the list of trusted certificates in the browser.
+
+For more information, see the guidance provided by your browser and Linux distribution.
+
 ::: zone-end
 
 ::: zone pivot="os-macos"
@@ -78,17 +90,12 @@ By [Daniel Roth](https://github.com/danroth27) and [Luke Latham](https://github.
 
    For information on the two Blazor hosting models, *Blazor WebAssembly* and *Blazor Server*, see <xref:blazor/hosting-models>.
 
-1. Confirm the following configurations:
-
-   * **Target Framework** set to **.NET Core 3.1**.
-   * **Authentication** set to **No Authentication**.
-   
-   Select **Next**.
+1. Confirm that **Authentication** is set to **No Authentication**. Select **Next**.
 
 1. In the **Project Name** field, name the app `WebApplication1`. Select **Create**.
 
 1. Select **Run** > **Start Without Debugging** to run the app *without the debugger*. Run the app with **Run** > **Start Debugging** or the Run (&#9654;) button to run the app *with the debugger*.
 
-If a prompt appears to trust the development certificate, trust the certificate and continue. The user and keychain passwords are required to trust the certificate.
+If a prompt appears to trust the development certificate, trust the certificate and continue. The user and keychain passwords are required to trust the certificate. For more information on trusting the ASP.NET Core HTTPS development certificate, see <xref:security/enforcing-ssl#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos>.
 
 ::: zone-end
