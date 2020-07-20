@@ -5,9 +5,9 @@ description: Learn how to persist state in Blazor Server apps.
 monikerRange: '>= aspnetcore-3.1'
 ms.author: riande
 ms.custom: mvc
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 no-loc: [Blazor, "Blazor Server", "Blazor WebAssembly", "Identity", "Let's Encrypt", Razor, SignalR]
-uid: blazor/state-management
+uid: blazor/state-management/server
 ---
 # ASP.NET Core Blazor state management
 
@@ -20,9 +20,6 @@ Examples of state held for a user's circuit include:
 * The rendered UI: The hierarchy of component instances and their most recent render output.
 * The values of any fields and properties in component instances.
 * Data held in [dependency injection (DI)](xref:fundamentals/dependency-injection) service instances that are scoped to the circuit.
-
-> [!NOTE]
-> This article addresses state persistence in Blazor Server apps. Blazor WebAssembly apps can take advantage of [client-side state persistence in the browser](#client-side-in-the-browser) but require custom solutions or 3rd party packages beyond the scope of this article.
 
 ## Blazor circuits
 

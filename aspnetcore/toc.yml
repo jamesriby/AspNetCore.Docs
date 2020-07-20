@@ -408,7 +408,11 @@
             - name: Content Security Policy
               uid: blazor/security/content-security-policy
         - name: State management
-          uid: blazor/state-management
+          items:
+            - name: Overview
+              uid: blazor/state-management/index
+            - name: Blazor Server
+              uid: blazor/state-management/server
         - name: Debug WebAssembly
           uid: blazor/debug
         - name: WebAssembly performance
