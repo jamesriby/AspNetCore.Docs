@@ -26,7 +26,6 @@ Examples of state held for a user's circuit include:
 > [!NOTE]
 > This article addresses state persistence in Blazor Server apps. Blazor WebAssembly apps can take advantage of [client-side state persistence in the browser](#client-side-in-the-browser) but require custom solutions or 3rd party packages beyond the scope of this article.
 
-
 ## Preserve state
 
 In some scenarios, preserving state across circuits is desirable. An app can retain important data for a user if:
@@ -129,7 +128,7 @@ To install the `Microsoft.AspNetCore.ProtectedBrowserStorage` package:
 1. In the Blazor Server app project, add a package reference to [`Microsoft.AspNetCore.ProtectedBrowserStorage`](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).
 1. In the top-level HTML (for example, in the `Pages/_Host.cshtml` file in the default project template), add the following `<script>` tag:
 
-   ```html
+   ```cshtml
    <script src="_content/Microsoft.AspNetCore.ProtectedBrowserStorage/protectedBrowserStorage.js"></script>
    ```
 
